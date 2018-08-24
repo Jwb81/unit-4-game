@@ -8,8 +8,8 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -25,24 +25,24 @@
     <!-- create the character cards -->
     <div id='characters'>
         <div class='characterCard greenBorder'>
-            <span>Obi-Wan Kenobi</span><br>
+            <span class='characterName'>Obi-Wan Kenobi</span><br>
             <img class='characterCardImage' src='assets/images/obi_wan_kenobi.jpg' height='50px'>
             <br><span class='healthPoints' data-attack-power='6' data-counter-attack-power='10'>120</span>
         </div>
         <div class='characterCard greenBorder'>
-            <span>Luke Skywalker</span><br>
-            <img class='characterCardImage' src='assets/images/obi_wan_kenobi.jpg' height='50px'>
-            <br><span class='healthPoints' data-attack-power='7' data-counter-attack-power='11'>120</span>
+            <span class='characterName'>Luke Skywalker</span><br>
+            <img class='characterCardImage' src='assets/images/luke_skywalker.jpg' height='50px'>
+            <br><span class='healthPoints' data-attack-power='7' data-counter-attack-power='11'>100</span>
         </div>
         <div class='characterCard greenBorder'>
-            <span>Darth Sidious</span><br>
-            <img class='characterCardImage' src='assets/images/obi_wan_kenobi.jpg' height='50px'>
-            <br><span class='healthPoints' data-attack-power='8' data-counter-attack-power='12'>120</span>
+            <span class='characterName'>Darth Sidious</span><br>
+            <img class='characterCardImage' src='assets/images/darth_sidious.png' height='50px'>
+            <br><span class='healthPoints' data-attack-power='8' data-counter-attack-power='12'>150</span>
         </div>
         <div class='characterCard greenBorder'>
-            <span>Darth Maul</span><br>
-            <img class='characterCardImage' src='assets/images/obi_wan_kenobi.jpg' height='50px'>
-            <br><span class='healthPoints' data-attack-power='9' data-counter-attack-power='13'>120</span>
+            <span class='characterName'>Darth Maul</span><br>
+            <img class='characterCardImage' src='assets/images/darth_maul.jpeg' height='50px'>
+            <br><span class='healthPoints' data-attack-power='9' data-counter-attack-power='13'>180</span>
         </div>
         
     </div>
@@ -62,7 +62,28 @@
     <div id='currentOpponent'>
 
     </div>
+    <div id='logs'></div>
     
-
-    </body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Winner Winner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Congratulations!!! You have defeated all of the enemies!</p>
+                    <img src='assets/images/ninja.png' style="max-width: 100%">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
