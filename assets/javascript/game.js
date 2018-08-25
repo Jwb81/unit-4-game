@@ -76,13 +76,11 @@ $(() => {
 
         // check if enemy is dead
         if (enemyHealthPoints <= 0) {
-            console.log($('#enemies').children().length == 0);
             $(currentOpponent).detach();
             currentOpponent = null;
             $('#logs').append('<br>You killed ' + oppName)
             
             if ($('#enemies').children().length == 0) {
-                console.log("hi");
                 $('#exampleModal').modal('show');
                 return;
             }
